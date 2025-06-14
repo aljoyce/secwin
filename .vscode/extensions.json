@@ -1,0 +1,22 @@
+{
+    // See http://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+    // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+    // List of extensions which should be recommended for users of this workspace.
+    "recommendations": [
+        // Common Extensions
+        "ms-azuretools.vscode-docker",              // Docker support
+        "humao.rest-client",                        // A simple ReST test utility
+        "vscode-icons-team.vscode-icons",           // File and folder icons
+        "davidanson.vscode-markdownlint",           // A linter for markdown files
+        "bierner.markdown-mermaid",                 // A mermaid viewer, to allow diagrams in markdown files
+        "johnpapa.vscode-peacock",                  // Change the color of the workspace for easy identification
+        "tomoki1207.pdf",                           // PDF Viewer
+
+        // UI Extensions
+        "dart-code.flutter",                        //Flutter support and debugger for Visual Studio Code
+    ],
+
+    // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+    "unwantedRecommendations": []
+}

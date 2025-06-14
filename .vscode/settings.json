@@ -1,0 +1,18 @@
+{
+    // ----------------------------------
+    // VSCode Settings
+    // ----------------------------------
+
+    // Set the tab size to 4 spaces
+    "editor.tabSize": 4,
+
+    // Show a ruler to easily know when a line of text is over the limit
+    "editor.rulers": [
+        88,
+        120
+    ],
+
+    // File associations for file types that are not otherwise know
+    "files.associations": {
+    }
+}

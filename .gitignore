@@ -1,0 +1,10 @@
+.DS_Store
+
+**/bin/
+**/obj
+
+**/.vs
+
+**/Thumbs.db*
+
+secwin_service/secwin_setup/DataFiles.wxs
