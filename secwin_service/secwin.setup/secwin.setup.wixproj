@@ -1,0 +1,55 @@
+﻿<Project Sdk="WixToolset.Sdk/6.0.1">
+	<ItemGroup>
+		<Content Include="assets\secwin.ico" />
+		<Content Include="ui\data\flutter_assets\assets\icons\app_icon.ico" />
+		<Content Include="ui\data\flutter_assets\assets\icons\app_icon.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\secwin.service\secwin.service.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="certs\secwin.pfx" />
+		<None Include="ui\data\app.so" />
+		<None Include="ui\data\flutter_assets\AssetManifest.bin" />
+		<None Include="ui\data\flutter_assets\AssetManifest.json" />
+		<None Include="ui\data\flutter_assets\assets\certs\secwin-cert.pem" />
+		<None Include="ui\data\flutter_assets\assets\certs\secwin-key.pem" />
+		<None Include="ui\data\flutter_assets\FontManifest.json" />
+		<None Include="ui\data\flutter_assets\fonts\MaterialIcons-Regular.otf" />
+		<None Include="ui\data\flutter_assets\NativeAssetsManifest.json" />
+		<None Include="ui\data\flutter_assets\NOTICES.Z" />
+		<None Include="ui\data\flutter_assets\packages\cupertino_icons\assets\CupertinoIcons.ttf" />
+		<None Include="ui\data\flutter_assets\shaders\ink_sparkle.frag" />
+		<None Include="ui\data\icudtl.dat" />
+		<None Include="ui\flutter_windows.dll" />
+		<None Include="ui\screen_retriever_windows_plugin.dll" />
+		<None Include="ui\secwin_ui.exe" />
+		<None Include="ui\system_tray_plugin.dll" />
+		<None Include="ui\window_manager_plugin.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="WixToolset.Heat" Version="4.0.0" />
+	</ItemGroup>
+
+	<Target Name="HarvestDataFiles" BeforeTargets="BeforeBuild">
+		<HeatDirectory
+		  Directory="$(MSBuildProjectDirectory)\ui\data"
+		  DirectoryRefId="DATADIR"
+		  ComponentGroupName="DataFiles"
+		  OutputFile="$(MSBuildProjectDirectory)\DataFiles.wxs"
+		  SuppressFragments="true"
+		  SuppressRegistry="true"
+		  SuppressRootDirectory="true"
+		  GenerateGuidsNow="true"/>
+
+		<ItemGroup>
+			<DataFilesContent Include="$([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\DataFiles.wxs'))" />
+		</ItemGroup>
+
+		<WriteLinesToFile File="$(MSBuildProjectDirectory)\DataFiles.wxs"
+						  Lines="@(DataFilesContent -> Replace('SourceDir\', 'ui\data\'))"
+						  Overwrite="true" />
+	</Target>
+
+</Project>

@@ -1,0 +1,62 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="SecwinComponents" Directory="INSTALLFOLDER">
+			<Component Directory="SERVICEDIR">
+				<File
+					Id="ServiceExe" Source="publish\win-x64\secwin.service.exe" KeyPath="yes" />
+				<File Id="ServiceConfig" Source="publish\win-x64\appsettings.json" />
+
+				<!-- Install the service -->
+				<ServiceInstall
+					Id="SecwinServiceInstaller"
+					Type="ownProcess"
+					Name="SecwinService"
+					DisplayName="Secwin Service"
+					Description="Provides core functionality for Secwin"
+					Start="auto"
+					ErrorControl="normal"
+					Account="LocalSystem" />
+
+				<!-- Control the service during install/uninstall -->
+				<ServiceControl
+					Id="StartSecwinService"
+					Name="SecwinService"
+					Start="install"
+					Stop="both"
+					Remove="uninstall"
+					Wait="yes" />
+			</Component>
+
+			<Component Id="CertificatesComponent" Directory="CERTSDIR">
+				<File Id="CertFilePfx" Source="certs\secwin.pfx" />
+			</Component>
+
+			<Component Id="UIComponent" Directory="UIDIR" Guid="*">
+				<File Id="UIExe" Source="ui\secwin_ui.exe" KeyPath="yes" />
+				<File Id="FlutterWindowsDll" Source="ui\flutter_windows.dll" />
+				<File Id="ScreenWindowsDll" Source="ui\screen_retriever_windows_plugin.dll" />
+				<File Id="SystemTray.dll" Source="ui\system_tray_plugin.dll" />
+				<File Id="WindowManager.dll" Source="ui\window_manager_plugin.dll" />
+			</Component>
+
+			<Component Id="DesktopShortcutComponent" Directory="DesktopFolder" Guid="*">
+				<Shortcut Id="DesktopShortcut"
+						  Name="Secwin UI"
+						  Target="[UIDIR]secwin_ui.exe"
+						  WorkingDirectory="UIDIR"
+						  Icon="SecwinIcon"
+						  IconIndex="0" />
+				<RegistryValue Root="HKCU"
+							   Key="Software\[Manufacturer]\[ProductName]\Shortcuts"
+							   Name="SecwinUIDesktop"
+							   Type="integer"
+							   Value="1"
+							   KeyPath="yes"/>
+			</Component>
+
+			<ComponentGroupRef Id="DataFiles" />
+		</ComponentGroup>
+
+		<Icon Id="SecwinIcon" SourceFile="assets\secwin.ico" />
+	</Fragment>
+</Wix>

@@ -1,7 +1,7 @@
 # SecWin
 
-The windows service written in C# can be found here [secwin_service](./secwin_service/secwin_srv/)  
-The library used by the service can be found here [secwin_lib](./secwin_service/secwin_lib/)
+The windows service written in C# can be found here [secwin.service](./secwin_service/secwin.service/)  
+The library used by the service can be found here [secwin.core](./secwin_service/secwin.core/)
 
 The UI written in dart with flutter can be found here [secwin_ui](./secwin_ui/)
 
@@ -17,7 +17,7 @@ Everything is working fine on a Mac, the port to windows however did not go well
 
 ## Installation Instructions
 
-To install the application, run the installer [secwin_setup.msi](./install_files/secwin_setup.msi)
+To install the application, run the installer [secwin.setup.msi](./install_files/secwin.setup.msi)
 
 To uninstall, go to Add/Remove programs and search for Centripetal Secwin
 
@@ -32,7 +32,7 @@ To run the applications from the source the following is needed
 **Run the service code from the terminal:**
 
 ```sh
-cd secwin_service/secwin_con
+cd secwin_service/secwin.console
 dotnet run
 ```
 

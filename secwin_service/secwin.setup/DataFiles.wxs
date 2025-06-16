@@ -1,0 +1,84 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Fragment>
+        <DirectoryRef Id="DATADIR">
+            <Component Id="cmpd6P2t0EcEyQhOTg7W41YvoOO2vU" Guid="{341B6A52-7982-4E5A-9364-FCACD0D33512}">
+                <File Id="fil8ijBQYCQtrOWbrFYPo8IU1aJzck" KeyPath="yes" Source="ui\data\app.so" />
+            </Component>
+            <Component Id="cmpuMVynpglb1nuVE.gG2I1_cb.ZD8" Guid="{DCEB11FE-EAAB-4406-BB4C-93BF200E87A5}">
+                <File Id="filVO1ZtXB18demkWk_Tzab0mRs4UU" KeyPath="yes" Source="ui\data\icudtl.dat" />
+            </Component>
+            <Directory Id="dirsJqfCAhzP9K8Ws1SX5jwTHLTqpk" Name="flutter_assets">
+                <Component Id="cmpb563TMtsuROSUdPs1GBm5v4Q4K0" Guid="{3B8A8214-D436-4098-80B0-0314714BF273}">
+                    <File Id="file5CHSnbqbEoAiuiNgI_ohvlkBY0" KeyPath="yes" Source="ui\data\flutter_assets\NOTICES.Z" />
+                </Component>
+                <Component Id="cmp1SUuHmC9gdbazLyAnuJHbp2L7v0" Guid="{2F0541C7-B17B-4C23-8B9C-8630BDE2B40C}">
+                    <File Id="filo9e_Ezh1qiH.dNBcs5eyaOTyK9M" KeyPath="yes" Source="ui\data\flutter_assets\NativeAssetsManifest.json" />
+                </Component>
+                <Component Id="cmpeNyzfhfL3OQyrc70eTdfmYSU6CU" Guid="{E0B6EB53-F5DB-4EA6-A7EE-4E9CA7E5EEC4}">
+                    <File Id="fil_acuELl71rmS78Ixyn.wLNKlbQM" KeyPath="yes" Source="ui\data\flutter_assets\AssetManifest.json" />
+                </Component>
+                <Component Id="cmp1KOUQlBamPGlWFKr7kqDl88HfG8" Guid="{E69D5FD9-28B6-452A-8AB5-A5ABAEBE4B60}">
+                    <File Id="fil.VGLpljDQLv1BVZbd.YynBPqYEk" KeyPath="yes" Source="ui\data\flutter_assets\FontManifest.json" />
+                </Component>
+                <Component Id="cmpOhO_2O70IEfEkLTqyKVj00eNrPY" Guid="{185CBE75-F000-43EA-86BF-8C6DE59661B2}">
+                    <File Id="filfUbeCaDRIi1Wl0MtUDMj2bXel0s" KeyPath="yes" Source="ui\data\flutter_assets\AssetManifest.bin" />
+                </Component>
+                <Directory Id="dirCqvmZ7_Ws8ngbTaakMOiUqysFRU" Name="packages">
+                    <Directory Id="dirj7OuNszT3p45VkBJhXFiWMPz1VU" Name="cupertino_icons">
+                        <Directory Id="dirEmBuyicS8nqLcE8sTgl_a0wPs2o" Name="assets">
+                            <Component Id="cmprUf2xpOvPaCgDxIdQqOX4MjZubg" Guid="{1F73F3D9-6F49-4337-9699-1AD968DEB374}">
+                                <File Id="filL0QWNL_y9_d08e30dr1FF9eVvuw" KeyPath="yes" Source="ui\data\flutter_assets\packages\cupertino_icons\assets\CupertinoIcons.ttf" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+                <Directory Id="dirL.9s39ZU_.9CZpopgSAPq32JsI8" Name="shaders">
+                    <Component Id="cmp2KLsSte_t3hy1rlrvEGwgEPQGvY" Guid="{455E8010-BB85-4401-9FEC-22568FECAB1F}">
+                        <File Id="filR1wztPw_1gXw6dbm683QP2h08yo" KeyPath="yes" Source="ui\data\flutter_assets\shaders\ink_sparkle.frag" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirIcF_C7BJlnPtHmX1_B.ogQKQDGk" Name="fonts">
+                    <Component Id="cmpazRYGNF8JrmRnVkdPDCDQ4PchBQ" Guid="{E8E75F0B-5EE2-4683-A3F3-3C8E79E85B6C}">
+                        <File Id="filorBsgIO7Q26xOmtQ210URoAR6P0" KeyPath="yes" Source="ui\data\flutter_assets\fonts\MaterialIcons-Regular.otf" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirLEkEbnNP6yqSNWe5WkGsM6_u8Sk" Name="assets">
+                    <Directory Id="dirG7JfPIo7ra4BgZMfItOUe6Js3vw" Name="certs">
+                        <Component Id="cmpHugtBiVFInAGBE1dAV_y855VdM4" Guid="{27A3F536-7517-40BE-A008-DD1DAA38950E}">
+                            <File Id="filVxr5YWUKalej2mY.f9ZhWEwlITU" KeyPath="yes" Source="ui\data\flutter_assets\assets\certs\secwin-cert.pem" />
+                        </Component>
+                        <Component Id="cmpzC1AgfBGpRemWp0VnUMfMOijwZg" Guid="{D11F341A-F3F6-447F-8C40-431AB5839F9C}">
+                            <File Id="fileVHsOtgcqPKUMj5HcA5hMWF28.A" KeyPath="yes" Source="ui\data\flutter_assets\assets\certs\secwin-key.pem" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="dirf0O2WWUzsekfMHGJsDfQAhDwdBs" Name="icons">
+                        <Component Id="cmpuoTSK4zaLIcjGfsUs_UlG7P4m.M" Guid="{A69CD926-ACAF-4278-AD0B-8AF6E7D80F22}">
+                            <File Id="fil0YKc.MvLBvvYcHdddRdqnMfjrG0" KeyPath="yes" Source="ui\data\flutter_assets\assets\icons\app_icon.png" />
+                        </Component>
+                        <Component Id="cmpk_F_OrqgXH9MiUHnodJv8CMUJEI" Guid="{84061C9F-1D14-40E4-8D26-3C07CA84233A}">
+                            <File Id="fileuSQ7Nto2D7kj6coRNYeSHVShXU" KeyPath="yes" Source="ui\data\flutter_assets\assets\icons\app_icon.ico" />
+                        </Component>
+                    </Directory>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="DataFiles">
+            <ComponentRef Id="cmpd6P2t0EcEyQhOTg7W41YvoOO2vU" />
+            <ComponentRef Id="cmpuMVynpglb1nuVE.gG2I1_cb.ZD8" />
+            <ComponentRef Id="cmpb563TMtsuROSUdPs1GBm5v4Q4K0" />
+            <ComponentRef Id="cmp1SUuHmC9gdbazLyAnuJHbp2L7v0" />
+            <ComponentRef Id="cmpeNyzfhfL3OQyrc70eTdfmYSU6CU" />
+            <ComponentRef Id="cmp1KOUQlBamPGlWFKr7kqDl88HfG8" />
+            <ComponentRef Id="cmpOhO_2O70IEfEkLTqyKVj00eNrPY" />
+            <ComponentRef Id="cmprUf2xpOvPaCgDxIdQqOX4MjZubg" />
+            <ComponentRef Id="cmp2KLsSte_t3hy1rlrvEGwgEPQGvY" />
+            <ComponentRef Id="cmpazRYGNF8JrmRnVkdPDCDQ4PchBQ" />
+            <ComponentRef Id="cmpHugtBiVFInAGBE1dAV_y855VdM4" />
+            <ComponentRef Id="cmpzC1AgfBGpRemWp0VnUMfMOijwZg" />
+            <ComponentRef Id="cmpuoTSK4zaLIcjGfsUs_UlG7P4m.M" />
+            <ComponentRef Id="cmpk_F_OrqgXH9MiUHnodJv8CMUJEI" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
